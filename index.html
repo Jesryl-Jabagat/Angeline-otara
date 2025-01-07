@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PinoyMusic Recommendations</title>
+    <link rel="shortcut icon" href="8J+OtQ==" type="image/x-icon">
+    <link rel="stylesheet" href="sample.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="#" class="brand">🎵 PinoyMusic</a>
+                
+                
+                <label for="mobile-menu" class="mobile-menu-btn">
+                    ☰
+                </label>
+
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#recommendation">Recommendations</a>
+                    <a href="#playlist">Playlists</a>
+                    
+                    
+                    <span href="#" class="custom-signup-btn">Sign Up</span>
+                </div>
+                
+            </div>
+        </div>
+    </nav>
+
+    <div id="unique-login-modal" class="unique-login-modal">
+        <div class="unique-login-modal-content">
+            <span class="unique-close-btn1">&times;</span>
+            <h2>Login</h2>
+            <form id="unique-signup-form">
+                
+                <label for="unique-email">Email</label>
+                <input type="email" id="unique-email" name="email" required>
+    
+                <label for="unique-password">Password</label>
+                <input type="password" id="unique-password" name="password" required>
+                
+                
+
+                <div style="padding-left: 0.5rem;">Don't have an account? <span style="font-weight: bold;padding-left: 0.5rem;cursor: pointer;" onclick="sign()">Register</span></div>
+    
+                <button type="submit" id="button-modal">Login</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <div id="unique-signup-modal" class="unique-signup-modal">
+        <div class="unique-signup-modal-content">
+            <span class="unique-close-btn">&times;</span>
+            <h2>Create Account</h2>
+            <form id="unique-signup-form">
+                <label for="unique-username">Fullname</label>
+                <input type="text" id="unique-username" name="username" required>
+                
+                <label for="unique-email">Email</label>
+                <input type="email" id="unique-email" name="email" required>
+    
+                <label for="unique-password">Password</label>
+                <input type="password" id="unique-password" name="password" required>
+                
+                <label for="unique-password">Confirm Password</label>
+                <input type="password" id="unique-password" name="password" required>
+
+
+                <div style="padding-left: 0.5rem;">Already have an account? <span style="font-weight: bold;padding-left: 0.5rem;cursor: pointer;" onclick="log()">Login</span></div>
+    
+                <button type="submit" id="button-modal">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+
+    
+
+    <div class="container" >
+        <section class="theHead" id="home">
+            <h1>PinoyMusic Recommendations</h1>
+            <p>Discover the Best of Philippine Music</p>
+        </section>
+
+        <section class="search-section">
+            <div class="search-section">
+                <div class="search-bar">
+                    <input type="search" id="search-input" placeholder="What do you want to play?" autocomplete="off">
+                    <button id="search-button">Search</button>
+                </div>
+                <div id="suggestions" class="suggestions"></div>
+            </div>
+            
+            <div class="genre-filters">
+                <span class="genre-tag">OPM</span>
+                <span class="genre-tag">Pop</span>
+                <span class="genre-tag">Rock</span>
+                <span class="genre-tag">Hip-Hop</span>
+                <span class="genre-tag">Indie</span>
+                <span class="genre-tag">Folk</span>
+            </div>
+        </section>
+
+        <section class="trending-section" id="recommendation">
+            <h2 class="section-title">Trending Now</h2>
+            <div class="trending-list trending-slider ">
+                <div class="trending-item">
+                    <div class="image"><img src="asset/1.1.png" alt=""></div>
+                    <div class="song-title">Pantropiko</div>
+                    <div class="song-artist">Bini</div>
+                    <div class="song-meta">
+                        <span>Pop</span>
+                        <span>2024</span>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <div class="image"><img src="asset/2.png" alt=""></div>
+                    <div class="song-title">Salamin,Salamin</div>
+                    <div class="song-artist">Bini</div>
+                    <div class="song-meta">
+                        <span>P-pop</span>
+                        <span>2024</span>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <div class="image"><img src="asset/3.png" alt=""></div>
+                    <div class="song-title">Palagi</div>
+                    <div class="song-artist">Tj Monterde</div>
+                    <div class="song-meta">
+                        <span>Soft rock, OPM</span>
+                        <span>2024</span>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <div class="image"><img src="asset/4.png" alt=""></div>
+                    <div class="song-title">Raining In Manila</div>
+                    <div class="song-artist">Lola Amour</div>
+                    <div class="song-meta">
+                        <span>Rock, Pop</span>
+                        <span>2024</span>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <div class="image"><img src="asset/5.png" alt=""></div>
+                    <div class="song-title">Pasilyo</div>
+                    <div class="song-artist">SunKissed Lola</div>
+                    <div class="song-meta">
+                        <span>R&B, OPM</span>
+                        <span>2024</span>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <div class="image"><img src="asset/7.png" alt=""></div>
+                    <div class="song-title">Gusto ft. AI</div>
+                    <div class="song-artist">Zach Tabudlo</div>
+                    <div class="song-meta">
+                        <span>R&B, Pop</span>
+                        <span>2024</span>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <div class="image"><img src="asset/8.png" alt=""></div>
+                    <div class="song-title">Saan</div>
+                    <div class="song-artist">Maki</div>
+                    <div class="song-meta">
+                        <span>Folk, Pop</span>
+                        <span>2024</span>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <div class="image"><img src="asset/9.png" alt=""></div>
+                    <div class="song-title">711</div>
+                    <div class="song-artist">TONEEJAY</div>
+                    <div class="song-meta">
+                        <span>Folk, Indie</span>
+                        <span>2024</span>
+                    </div>
+                </div>
+
+                <div class="trending-item">
+                    <div class="image"><img src="asset/10.png" alt=""></div>
+                    <div class="song-title">Pano</div>
+                    <div class="song-artist">Zach Tabudlo</div>
+                    <div class="song-meta">
+                        <span>R&B, Pop</span>
+                        <span>2024</span>
+                    </div>
+                </div>
+
+                <div class="trending-item">
+                    <div class="image"><img src="asset/11.png" alt=""></div>
+                    <div class="song-title">Pagsamo</div>
+                    <div class="song-artist">Arthur Nery</div>
+                    <div class="song-meta">
+                        <span>R&B, OPM</span>
+                        <span>2024</span>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <div class="image"><img src="asset/12.png" alt=""></div>
+                    <div class="song-title">Gento</div>
+                    <div class="song-artist">SB19</div>
+                    <div class="song-meta">
+                        <span>Hip-Hop, Pop</span>
+                        <span>2024</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recommendations" id="playlist">
+            <!-- 2023 Songs -->
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/1.png" alt="Sining">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Sining</div>
+        <div class="song-artist">Dionela ft. Jay R</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2023</span>
+        </div>
+    </div>
+</div>
+
+    <div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/2.png" alt="Museo">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Museo</div>
+        <div class="song-artist">Eliza Maturan</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2023</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/3.png" alt="Maybe This Time">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Maybe This Time</div>
+        <div class="song-artist">Sarah Geronimo</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2023</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/4.png" alt="Palagi">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Palagi</div>
+        <div class="song-artist">TJ Monterde</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2023</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/5.png" alt="Blue">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Blue</div>
+        <div class="song-artist">Yung Kai</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2023</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/6.png" alt="Dilaw">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Dilaw</div>
+        <div class="song-artist">Maki</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2023</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/7.png" alt="I Need You">
+    </div>
+    <div class="song-info">
+        <div class="song-title">I Need You</div>
+        <div class="song-artist">Sam Mangubat</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2023</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/8.png" alt="Hiling">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Hiling</div>
+        <div class="song-artist">Jenzen Guino</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2023</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/9.png" alt="Sariling Mundo">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Sariling Mundo</div>
+        <div class="song-artist">TJ Monterde</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2023</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/10.png" alt="ERE">
+    </div>
+    <div class="song-info">
+        <div class="song-title">ERE</div>
+        <div class="song-artist">Juan Karlos</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2023</span>
+        </div>
+    </div>
+</div>
+
+<!-- 2024 Songs -->
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/11.png" alt="Biyahe">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Biyahe</div>
+        <div class="song-artist">Josh Santana</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2024</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/12.png" alt="Tadhana">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Tadhana</div>
+        <div class="song-artist">KZ Tandingan</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2024</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/13.png" alt="Randomantic">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Randomantic</div>
+        <div class="song-artist">James Reid</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2024</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/14.png" alt="Muli">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Muli</div>
+        <div class="song-artist">Ace Banzuelo</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2024</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/15.png" alt="Oksihina">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Oksihina</div>
+        <div class="song-artist">Dionela</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2024</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/16.png" alt="This Na Malambing">
+    </div>
+    <div class="song-info">
+        <div class="song-title">This Na Malambing</div>
+        <div class="song-artist">Ryannah J, Nateman</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2024</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/17.png" alt="Dito Ka Lang">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Dito Ka Lang</div>
+        <div class="song-artist">Moira Dela Torre</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2024</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/18.png" alt="Tingin">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Tingin</div>
+        <div class="song-artist">Cup of Joe, Janine Tenoso</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2024</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/19.png" alt="Ako Naman Muna">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Ako Naman Muna</div>
+        <div class="song-artist">Angela Ken</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2024</span>
+        </div>
+    </div>
+</div>
+
+<div class="song-card">
+    <div class="song-image">
+        <img src="asset/playlist/20.png" alt="Kung Alam Mo Lang">
+    </div>
+    <div class="song-info">
+        <div class="song-title">Kung Alam Mo Lang</div>
+        <div class="song-artist">Bandang Lapis</div>
+        <div class="song-meta">
+            <span>Filipino Pop</span>
+            <span>2024</span>
+        </div>
+    </div>
+</div>
+        </section>
+
+        
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+           
+           
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PinoyMusic. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+   
+    
+    
+</body>
+</html>
